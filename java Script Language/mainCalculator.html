@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Calculator</title>
+	<script>
+		function calculator() {
+		var a = document.getElementById('firstValue').value;
+		var b = document.getElementById('secondValue').value;
+		var c = document.getElementById('operator').value;
+		var d;
+		if (c == "+") { 
+			d = parseInt(a)+parseInt(b);
+        var d = document.getElementById('result').value=d;
+		}
+		else if (c == "-") { 
+			d = parseInt(a)-parseInt(b);
+        var d = document.getElementById('result').value=d;
+		}
+		else if (c == "*") { 
+			d = parseInt(a)*parseInt(b);
+        var d = document.getElementById('result').value=d;
+		}
+		else if (c == "/") { 
+			d = parseInt(a)/parseInt(b);
+        var d = document.getElementById('result').value=d;
+		}
+		}
+
+
+	</script>
+</head>
+<body>
+  <form>
+  	
+<table>
+	<tr>
+		<th>
+Enter First Value:
+		</th>
+		<td>
+			<input type="text" id="firstValue">
+		</td>
+	</tr>
+	<tr>
+		<th>
+Enter Second Value:
+		</th>
+		<td>
+			<input type="text" id="secondValue">
+		</td>
+	</tr>
+	<tr>
+		<th>
+   Operator:
+		</th>
+		<td>
+			<input type="text" id="operator">
+		</td>
+	</tr>
+
+	<tr>
+		<th>
+   Result:
+		</th>
+		<td>
+			<input type="text" id="result">
+		</td>
+	</tr>
+      <tr>
+		<th colspan="2">
+			<input type="button" value="Calculate" onclick="calculator();">
+		</th>
+	</tr>
+
+
+
+</table>
+
+
+
+  </form>
+
+
+
+
+
+</body>
+</html>

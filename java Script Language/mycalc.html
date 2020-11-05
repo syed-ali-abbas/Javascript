@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Calculator</title>
+	<script>
+		
+      function calculate(){
+                var a = document.getElementById('value1').value;
+                var b = document.getElementById('value2').value;
+                c = document.getElementById('operator').value;
+                if (c=="+") {
+                	d = parseInt(a)+parseInt(b);
+                	document.getElementById('result').value=d;
+
+                }
+                  else if (c=="-") {
+                	d = parseInt(a)-parseInt(b);
+                	document.getElementById('result').value=d;
+                }
+                   else if (c=="x") {
+                	d = parseInt(a)*parseInt(b);
+                	document.getElementById('result').value=d;
+                }
+                else if (c=="/") {
+                	d = parseInt(a)/parseInt(b);
+                	document.getElementById('result').value=d;
+                }
+      }
+	</script>
+	<style>
+		body img{
+
+
+		}
+		th{
+         color: black;
+         z-index: 1000px;
+		}
+		input[type="button"]{
+			padding: 20px;
+			border: 3px solid black;
+			border-radius: 180px;
+			color: white;
+			background-color: black;
+			width:150px;
+			font-size: 18px;
+		}
+		input[type="button"]:hover{
+			padding: 25px;
+			transition: padding 15s;
+			border: 6px solid navy;
+			border-radius: 180px;
+			font-weight: bold;
+            font-size: 20px;
+			color: white;
+			background-color: lightblue;
+			width:150px;
+		}
+	</style>
+</head>
+<body>
+	<img src="E:\Aptech Project\sky-wallpapers-28043-2711012.jpg">
+	<center>
+	<form>
+		<table>
+			<tr>
+				<th>First Number</th>
+				<th><input type="number" id="value1"></th>
+			</tr>
+			<tr>
+				<th>Second Number</th>
+				<th><input type="number" id="value2"></th>
+			</tr>
+			<tr>
+				<th>
+				Operator:
+				</th>
+				<th>
+				<input type="text" id="operator">
+				</th>
+			</tr>
+			<tr>
+			<th>Result:</th>
+			<th><input type="number" id="result"></th>
+			</tr>
+			<tr>
+			
+			<th><input type="button" value="=" onclick="calculate();"></th>
+			</tr>
+		</table>
+	</form>
+</center>
+</body>
+</html>

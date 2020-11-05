@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+
+<script>
+	  function calculate(){
+           var first = document.getElementById('txt1').value;
+           var second = document.getElementById('txt2').value
+           var result = parseInt(first)+parseInt(second);
+           document.getElementById('txt3').value = result;	  }
+	
+    
+</script>
+
+<style>
+	form header{
+      font-weight: bold;
+      font-size: 34px;
+      font-family: cursive;
+	}
+	table{
+
+       border: 3px solid navy;
+       width: 300px;
+       height: 300px;
+      padding: 5px;
+	}
+	tr{
+         
+
+
+	}
+	td{
+       padding: 10px;
+      
+	}
+	td input{
+        padding: 20px;
+        width: 120px;
+	}
+</style>
+
+</head>
+<body>
+       <center>
+       	 <form>
+       	 	<table>
+       	 		<tr>
+       	 			<th>
+       	 				First Value:
+       	 				<input type="number" id="txt1"/>
+       	 			</th>
+       	 			<th>
+       	 				Second Value:
+       	 				<input type="number" id="txt2"/>
+       	 			</th>
+       	 		</tr>
+       	 		<tr>
+       	 			<th>
+       	 				Results:
+       	 				<input type="number" id="txt3"/>
+       	 				<input type="button" value="Calculate" onclick="calculate();"/>
+       	 			</th>
+
+       	 		</tr>
+       	 	</table>
+
+
+
+
+       	 </form>
+
+
+
+       </center>
+</body>
+</html>

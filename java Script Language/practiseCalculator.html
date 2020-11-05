@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+     <link rel="stylesheet" type="text/css" href="cssCalculator.css">
+	<script>
+          var number1, number2, operatorVariable, result;
+          function enterNumberFunction(numbers){
+               document.getElementById('textbox').value+=numbers;
+          }
+          function operatorsFunction(operator){
+          number1 = document.getElementById('textbox').value;
+          operatorVariable = operator;
+          document.getElementById('textbox').value="";
+          }
+          function resultFunction(){
+          number2=document.getElementById('textbox').value;
+          if (operatorVariable=='+') {
+              result=parseFloat(number1)+parseFloat(number2);
+              document.getElementById('textbox').value=result;
+          }
+          else if(operatorVariable=='-'){
+               result=parseFloat(number1)-parseFloat(number2);
+              document.getElementById('textbox').value=result;
+          }
+          else if(operatorVariable=='x'){
+               result=parseFloat(number1*number2);
+              document.getElementById('textbox').value=result;
+          }
+           else if(operatorVariable=='/'){
+               result=parseFloat(number1)/parseFloat(number2);
+              document.getElementById('textbox').value=result;
+          }
+     }
+     
+     var trignometricVariable;
+     function sin(){
+          trignometricVariable=document.getElementById('textbox').value;
+          var v = Math.sin(trignometricVariable);
+          document.getElementById('textbox').value=v;
+     }
+      function cos(){
+          trignometricVariable=document.getElementById('textbox').value;
+          var v = Math.cos(trignometricVariable);
+          document.getElementById('textbox').value=v;
+     }
+      function tan(){
+          trignometricVariable=document.getElementById('textbox').value;
+          var v = Math.tan(trignometricVariable);
+          document.getElementById('textbox').value=v;
+     }
+     function deleteData(){
+          document.getElementById('textbox').value="";
+     }
+     var roots;
+     function squaring(){
+        roots = document.getElementById('textbox').value;
+        var square = Math.pow(roots,2);
+        document.getElementById('textbox').value=square;
+     }
+      function cubing(){
+        roots = document.getElementById('textbox').value;
+        var cube = Math.pow(roots,3);
+        document.getElementById('textbox').value=cube;
+     }
+      function fourth(){
+        roots = document.getElementById('textbox').value;
+        var fourth = Math.pow(roots,4);
+        document.getElementById('textbox').value=fourth;
+     }
+      function fifth(){
+        roots = document.getElementById('textbox').value;
+        var five = Math.pow(roots,5);
+        document.getElementById('textbox').value=five;
+     }
+      function sixth(){
+        roots = document.getElementById('textbox').value;
+        var six = Math.pow(roots,2);
+        document.getElementById('textbox').value=six;
+     }
+	</script>
+</head>
+<body>
+	<center>
+     <form>
+     	<table border="2px">
+          <tr>
+                <th colspan="5">
+                     <input type="text"  id="textbox">
+                </th>
+           </tr>    
+           <tr>
+                <th>
+                     <input type="button" value="1" onclick="enterNumberFunction('1');">
+                </th>
+                <th>
+                     <input type="button" value="2" onclick="enterNumberFunction('2');" >
+                </th>
+                <th>
+                     <input type="button" value="3" onclick="enterNumberFunction('3');">
+                </th>
+                <th>
+                     <input type="button" value="+" onclick="operatorsFunction('+');">
+                </th>
+                <th>
+                     <input type="button" value="Sin()" onclick="sin();">
+                </th>
+           </tr>    
+
+           <tr>
+                <th>
+                     <input type="button" value="4" onclick="enterNumberFunction('4');">
+                </th>
+                <th>
+                     <input type="button" value="5" onclick="enterNumberFunction('5');" >
+                </th>
+                <th>
+                     <input type="button" value="6" onclick="enterNumberFunction('6');">
+                </th>
+                <th>
+                     <input type="button" value="-" onclick="operatorsFunction('-');">
+                </th>
+                <th>
+                     <input type="button" value="Cos()" onclick="cos();">
+                </th>
+           </tr>    
+
+           <tr>
+                <th>
+                     <input type="button" value="7" onclick="enterNumberFunction('7');">
+                </th>
+                <th>
+                     <input type="button" value="8" onclick="enterNumberFunction('8');" >
+                </th>
+                <th>
+                     <input type="button" value="9" onclick="enterNumberFunction('9');">
+                </th>
+                <th>
+                     <input type="button" value="x" onclick="operatorsFunction('x');">
+                </th>
+                <th>
+                     <input type="button" value="tan()" onclick="tan()">
+                </th>
+           </tr>    
+
+             <tr>
+                <th>
+                     <input type="button" value="0" onclick="enterNumberFunction('0');">
+                </th>
+                <th>
+                     <input type="button" value="/" onclick="operatorsFunction('/');" >
+                </th>
+                <th>
+                     <input type="button" value="=" onclick="resultFunction();">
+                </th>
+                <th>
+                     <input type="button" value="." onclick="enterNumberFunction('.');">
+                </th>
+                <th>
+                     <input type="button" value="Del" onclick="deleteData();">
+                </th>
+           </tr>      
+            <tr>
+                <th>
+                     <input type="button" value="x^2" onclick="squaring();">
+                </th>
+                <th>
+                     <input type="button" value="x^3" onclick="cubing();">
+                </th>
+                <th>
+                     <input type="button" value="x^4" onclick="fourth();">
+                </th>
+                <th>
+                     <input type="button" value="x^5" onclick="fifth();">
+                </th>
+                <th>
+                     <input type="button" value="x^6" onclick="sixth();">
+                </th>
+           </tr>      
+          </table>
+     </form>
+</center>
+
+
+
+
+</body>
+</html>
